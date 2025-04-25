@@ -9,14 +9,15 @@
 3. Google Drive API和服務帳號憑證
 4. Gemini API密鑰
 5. Python 3.7+和pip
-6. 伺服器或雲端平台(如Heroku, AWS, GCP等)
+6. 開發階段：ngrok
+7. 生產環境階段：伺服器或雲端平台(如Heroku, AWS, GCP等)
 
 ## 步驟1: 設置LINE Messaging API
 
 1. 登入LINE開發者控制台 (https://developers.line.biz/)
 2. 創建一個提供商和頻道（Channel）
 3. 獲取Channel Access Token和Channel Secret
-4. 在Webhook設置中，啟用Webhook並設置URL為`https://您的伺服器網址/callback`
+4. 在Webhook設置中，啟用Webhook並設置URL為`https://您的伺服器網址/callback`，這裡的『您的伺服器網址』可從ngrok的Endpoints取得。
 
 ## 步驟2: 設置Google Cloud Platform
 
