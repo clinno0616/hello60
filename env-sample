@@ -1,0 +1,8 @@
+LINE_CHANNEL_ACCESS_TOKEN = "tHFfr3..............."
+LINE_CHANNEL_SECRET = "25bab..................."
+GOOGLE_CREDENTIALS_PATH = "./gen-lang-client-0207859253-ec6f14d8ab96.json"
+GOOGLE_DRIVE_PDF_ID = "1cIL..............."
+GEMINI_API_KEY = "AIzaS......................"
+
+
+
