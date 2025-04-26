@@ -100,15 +100,6 @@ ngrok http 8000
    - 確認Channel Access Token是否正確
    - 檢查是否超過了LINE API的限制
 
-### 日誌記錄
-
-確保您的應用程序記錄足夠的信息以便於調試：
-
-```python
-import logging
-logging.basicConfig(level=logging.INFO)
-```
-
 ## 安全注意事項
 
 1. 永遠不要直接在代碼中硬編碼敏感信息
