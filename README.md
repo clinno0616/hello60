@@ -8,7 +8,7 @@
 2. Google Cloud Platform帳號及專案
 3. Google Drive API和服務帳號憑證
 4. Gemini API密鑰
-5. Python 3.7+和pip
+5. Python 3.10+和pip
 6. 開發階段：ngrok
 7. 生產環境階段：伺服器或雲端平台(如Heroku, AWS, GCP等)
 
