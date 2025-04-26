@@ -75,64 +75,6 @@ python app.py
 ```bash
 ngrok http 8000
 ```
-
-3. 將生成的HTTPS URL設置為LINE Webhook URL
-
-### 生產環境部署
-
-#### Heroku部署
-
-1. 創建`Procfile`文件：
-
-```
-web: gunicorn app:app
-```
-
-2. 初始化Git倉庫並提交：
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-```
-
-3. 創建Heroku應用並部署：
-
-```bash
-heroku create your-app-name
-heroku config:set LINE_CHANNEL_ACCESS_TOKEN=your_token
-heroku config:set LINE_CHANNEL_SECRET=your_secret
-heroku config:set GOOGLE_DRIVE_PDF_ID=your_pdf_id
-heroku config:set GEMINI_API_KEY=your_gemini_key
-```
-
-4. 對於Google憑證，您可以使用以下命令設置：
-
-```bash
-heroku config:set GOOGLE_APPLICATION_CREDENTIALS_JSON='{"type":"service_account",...}'
-```
-
-5. 修改代碼以支持Heroku環境變量：
-
-```python
-import json
-import os
-
-# 如果GOOGLE_APPLICATION_CREDENTIALS_JSON環境變量存在，創建臨時文件
-if 'GOOGLE_APPLICATION_CREDENTIALS_JSON' in os.environ:
-    credentials_json = json.loads(os.environ['GOOGLE_APPLICATION_CREDENTIALS_JSON'])
-    credentials_path = '/tmp/google-credentials.json'
-    with open(credentials_path, 'w') as f:
-        json.dump(credentials_json, f)
-    os.environ['GOOGLE_CREDENTIALS_PATH'] = credentials_path
-```
-
-6. 部署到Heroku：
-
-```bash
-git push heroku master
-```
-
 ## 步驟7: 驗證部署
 
 1. 使用LINE應用程序向您的BOT發送消息
@@ -166,12 +108,6 @@ git push heroku master
 ```python
 import logging
 logging.basicConfig(level=logging.INFO)
-```
-
-在Heroku上，您可以使用以下命令查看日誌：
-
-```bash
-heroku logs --tail
 ```
 
 ## 安全注意事項
