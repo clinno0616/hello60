@@ -17,6 +17,8 @@
 2. 創建一個提供商和頻道（Channel）
 3. 獲取Channel Access Token和Channel Secret
 4. 在Webhook設置中，啟用Webhook並設置URL為`https://您的伺服器網址/callback`，這裡的『您的伺服器網址』可從ngrok的Endpoints取得。
+   ![image](https://github.com/user-attachments/assets/b664a905-8874-413f-ba05-dbf371ff691e)
+
 
 ## 步驟2: 設置Google Cloud Platform
 
