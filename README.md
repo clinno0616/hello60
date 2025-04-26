@@ -10,7 +10,6 @@
 4. Gemini API密鑰
 5. Python 3.10+和pip
 6. 開發階段：ngrok
-7. 生產環境階段：伺服器或雲端平台(如Heroku, AWS, GCP等)
 
 ## 步驟1: 設置LINE Messaging API
 
